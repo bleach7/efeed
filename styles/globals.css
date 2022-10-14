@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::selection {
+  @apply bg-[#DE0000] text-white;
+}
+
+body::-webkit-scrollbar {
+  @apply w-[7.5px];
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply rounded bg-[#7653FC];
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+html,
+body {
+  @apply h-full;
+}
+
+body {
+  @apply scroll-smooth bg-[#F5F6F8] font-noto-sans text-[14px] font-normal leading-[24px] text-[#3B434E];
+}
+
+#root {
+  @apply flex min-h-full flex-col overflow-hidden;
+}
