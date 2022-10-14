@@ -1,0 +1,11 @@
+.h1 {
+  @apply text-[26px] font-medium leading-[35px];
+}
+
+.h2 {
+  @apply text-[22px] font-medium leading-[30px];
+}
+
+.h3 {
+  @apply text-[20px] font-semibold leading-[27px];
+}
