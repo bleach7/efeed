@@ -1,5 +1,5 @@
 .badge {
-  @apply rounded-[20px] border border-transparent py-[4px] px-[9px] leading-none;
+  @apply inline-block rounded-[20px] border border-transparent py-[4px] px-[9px] leading-none;
 }
 
 .sm {
