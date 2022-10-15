@@ -1,0 +1,8 @@
+import { ButtonHTMLAttributes, ReactNode } from "react";
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: string;
+  className?: string;
+  appearance: "primary" | "secondary";
+  arrow?: "right" | "down" | "none";
+}
