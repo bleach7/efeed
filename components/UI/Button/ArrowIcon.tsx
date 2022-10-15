@@ -4,9 +4,10 @@ interface ArrowIconProps extends SVGProps<SVGSVGElement> {
   className?: string;
 }
 
-export const ArrowIcon = ({ className }: ArrowIconProps) => {
+export const ArrowIcon = ({ className, ...props }: ArrowIconProps) => {
   return (
     <svg
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="6"
       height="10"
