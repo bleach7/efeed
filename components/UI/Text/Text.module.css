@@ -1,11 +1,11 @@
 .sm {
-  @apply text-[14px] leading-[24px];
+  @apply text-[14px] leading-[19px];
 }
 
 .md {
-  @apply text-[16px] leading-[24px];
+  @apply text-[16px] leading-[21px];
 }
 
 .lg {
-  @apply text-[18px] leading-[29px];
+  @apply text-[18px] leading-[24px];
 }

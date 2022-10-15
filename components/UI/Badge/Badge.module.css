@@ -3,11 +3,11 @@
 }
 
 .sm {
-  @apply text-[12px];
+  @apply text-[12px] leading-[16px];
 }
 
 .md {
-  @apply text-[14px];
+  @apply text-[14px] leading-[19px];
 }
 
 .ghost {
