@@ -27,6 +27,6 @@ body {
   @apply scroll-smooth bg-[#F5F6F8] font-noto-sans text-[14px] font-normal leading-[19px] text-[#3B434E];
 }
 
-#root {
+#__next {
   @apply flex min-h-full flex-col overflow-hidden;
 }
