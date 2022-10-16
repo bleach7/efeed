@@ -1,5 +1,5 @@
 .badge {
-  @apply inline-block rounded-[20px] border border-transparent py-[4px] px-[9px] leading-none;
+  @apply inline-block rounded-[20px] border border-transparent py-[4px] px-[9px] font-semibold leading-none;
 }
 
 .sm {
@@ -11,21 +11,21 @@
 }
 
 .ghost {
-  @apply border-[#EBEBEB] font-medium text-[#3B434E];
+  @apply border-[#EBEBEB] text-[#3B434E];
 }
 
 .primary {
-  @apply border-[#7653FC] font-medium text-[#7653FC];
+  @apply border-[#7653FC] text-[#7653FC];
 }
 
 .red {
-  @apply bg-[#DE0000] font-semibold text-white;
+  @apply bg-[#DE0000] text-white;
 }
 
 .gray {
-  @apply bg-[#B3C0D9] font-semibold text-white;
+  @apply bg-[#B3C0D9] text-white;
 }
 
 .green {
-  @apply bg-[#C8F8E4] font-bold text-[#1DC37E];
+  @apply bg-[#C8F8E4] text-[#1DC37E];
 }
