@@ -1,0 +1,11 @@
+.starBtn:not(:last-child) {
+  @apply mr-[5px];
+}
+
+.starIcon {
+  @apply h-[20px] w-[20px] fill-[#E2E2E2] transition-colors duration-300 ease-in-out;
+}
+
+.filled {
+  @apply fill-[#7653FC];
+}
