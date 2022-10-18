@@ -1,0 +1,48 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    ". header header ."
+    ". sidebar main ."
+    "footer footer footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto 230px minmax(320px, 1200px) auto;
+  min-height: 100vh;
+  overflow: hidden;
+
+  column-gap: 30px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  @apply hidden md:block;
+
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+
+    column-gap: 0px;
+  }
+
+  .header,
+  .main {
+    padding: 0 25px;
+  }
+}
