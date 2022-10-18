@@ -1,0 +1,13 @@
+.footer {
+  @apply flex items-center justify-between bg-[#7653FC] px-[25px] py-[25px] font-medium text-white md:px-[30px];
+}
+
+@media only screen and (max-width: 900px) {
+  .footer {
+    @apply flex-col;
+  }
+
+  .copyright {
+    @apply mb-[25px];
+  }
+}
