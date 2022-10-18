@@ -18,28 +18,28 @@ export const Rating = ({
     constructRating(rating);
   }, [rating]);
 
-  const changeDisplay = (i: number) => {
+  const changeDisplay = (i: number): void | undefined => {
     if (!isEditable) {
       return;
     }
     constructRating(i);
   };
 
-  const handleClick = (i: number) => {
+  const handleClick = (i: number): void | undefined => {
     if (!isEditable || !setRating) {
       return;
     }
     setRating(i);
   };
 
-  const handleSpace = (i: number, e: any) => {
+  const handleSpace = (i: number, e: any): void | undefined => {
     if (e.code !== "Space" || !setRating) {
       return;
     }
     setRating(i);
   };
 
-  const constructRating = (currentRating: number) => {
+  const constructRating = (currentRating: number): void => {
     const updatedArray = ratingArray.map(
       (ratingItem: JSX.Element, i: number) => {
         return (
