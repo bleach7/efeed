@@ -19,14 +19,11 @@ body::-webkit-scrollbar-track {
 }
 
 html,
-body {
+body,
+#__next {
   @apply h-full;
 }
 
 body {
   @apply scroll-smooth bg-[#F5F6F8] font-noto-sans text-[14px] font-normal leading-[19px] text-[#3B434E];
-}
-
-#__next {
-  @apply flex min-h-full flex-col overflow-hidden;
 }
