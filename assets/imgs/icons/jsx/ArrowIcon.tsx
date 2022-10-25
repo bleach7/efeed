@@ -1,6 +1,7 @@
+import { memo } from "react";
 import { IconProps } from "./Icon.props";
 
-export const ArrowIcon = ({ className, ...props }: IconProps) => {
+const ArrowIcon = ({ className, ...props }: IconProps) => {
   return (
     <svg
       {...props}
@@ -14,3 +15,5 @@ export const ArrowIcon = ({ className, ...props }: IconProps) => {
     </svg>
   );
 };
+
+export default memo(ArrowIcon);

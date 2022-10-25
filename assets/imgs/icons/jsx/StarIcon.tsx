@@ -1,6 +1,7 @@
+import { memo } from "react";
 import { IconProps } from "./Icon.props";
 
-export const StarIcon = ({ className }: IconProps) => {
+const StarIcon = ({ className }: IconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,3 +15,5 @@ export const StarIcon = ({ className }: IconProps) => {
     </svg>
   );
 };
+
+export default memo(StarIcon);
