@@ -3,7 +3,7 @@
   grid-template-areas:
     ". header header ."
     ". sidebar main ."
-    "footer footer footer footer";
+    ". footer footer .";
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 230px minmax(320px, 1200px) auto;
   min-height: 100vh;

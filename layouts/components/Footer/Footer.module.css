@@ -1,5 +1,5 @@
 .footer {
-  @apply flex items-center justify-between bg-[#7653FC] px-[25px] py-[25px] font-medium text-white md:px-[30px];
+  @apply relative flex items-center justify-between bg-[#7653FC] px-[25px] py-[25px] font-medium text-white before:absolute before:top-0 before:left-2/4 before:-z-10 before:h-full before:w-screen before:-translate-x-2/4 before:bg-[#7653FC] before:content-[''] md:px-0;
 }
 
 @media only screen and (max-width: 900px) {
