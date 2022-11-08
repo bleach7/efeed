@@ -1,0 +1,19 @@
+.item:not(:last-child) {
+  @apply mb-[20px];
+}
+
+.firstLevel {
+  @apply grid grid-cols-[24px_1fr] items-center gap-x-[20px] fill-current text-[18px] font-medium leading-[24px] text-[#787D85];
+}
+
+.firstLevel_active {
+  @apply mb-[14px] text-[#7653FC];
+}
+
+.secondLevelBlock {
+  @apply mt-[13px] pl-[16px] text-[12px] leading-[16px];
+}
+
+.secondLevelBlock > li:not(:last-child) {
+  @apply mb-[7px];
+}
