@@ -11,9 +11,17 @@
 }
 
 .secondLevelBlock {
-  @apply mt-[13px] pl-[16px] text-[12px] leading-[16px];
+  @apply mt-[13px] hidden pl-[16px] text-[12px] leading-[16px];
 }
 
 .secondLevelBlock > li:not(:last-child) {
   @apply mb-[7px];
+}
+
+.secondLevelBlockOpened {
+  @apply block;
+}
+
+.thirdLevel_active {
+  @apply text-[#7653FC];
 }

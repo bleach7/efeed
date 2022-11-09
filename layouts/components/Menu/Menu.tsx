@@ -13,6 +13,8 @@ import {
 } from "../../../assets/imgs/icons/jsx";
 import { TopLevelCategory } from "../../../interfaces/page.interface";
 import cn from "classnames";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const firstLevelMenu: IFirstLevelMenuItem[] = [
   {
@@ -44,20 +46,35 @@ const firstLevelMenu: IFirstLevelMenuItem[] = [
 export const Menu: FC = () => {
   const { menu, setMenu, firstCategory } = useContext(AppContext);
 
+  const router = useRouter();
+
+  const openSecondLevel = (secondCategory: string) => {
+    setMenu &&
+      setMenu(
+        menu.map((m) => {
+          if (m._id.secondCategory == secondCategory) {
+            m.isOpened = !m.isOpened;
+          }
+          return m;
+        })
+      );
+  };
+
   const BuildFisrtLevel = () => {
     return (
       <>
         {firstLevelMenu.map((menu) => (
           <li key={menu.route} className={styles.item}>
-            <a
-              href={`/${menu.route}`}
-              className={cn(styles.firstLevel, {
-                [styles.firstLevel_active]: menu.id === firstCategory,
-              })}
-            >
-              {menu.icon}
-              <span>{menu.name}</span>
-            </a>
+            <Link href={`/${menu.route}`}>
+              <a
+                className={cn(styles.firstLevel, {
+                  [styles.firstLevel_active]: menu.id === firstCategory,
+                })}
+              >
+                {menu.icon}
+                <span>{menu.name}</span>
+              </a>
+            </Link>
             {menu.id === firstCategory && (
               <BuildSecondLevel menuFromFirstLevel={menu} />
             )}
@@ -76,24 +93,39 @@ export const Menu: FC = () => {
   }) => {
     return (
       <ul className="ml-[13px] border-l border-l-[#DFDFDF] pl-[32px]">
-        {menu.map((menuItem) => (
-          <li
-            key={menuItem._id.secondCategory}
-            className="mb-[10px] text-[14px] font-medium leading-[19px] text-[#787D85]"
-          >
-            <button type="button">{menuItem._id.secondCategory}</button>
-            <ul
-              className={cn(styles.secondLevelBlock, {
-                [styles.secondLevelBlockOpened]: menuItem.isOpened,
-              })}
+        {menu.map((menuItem) => {
+          if (
+            menuItem.pages
+              .map((p) => p.alias)
+              .includes(router.asPath.split("/")[2])
+          ) {
+            menuItem.isOpened = true;
+          }
+
+          return (
+            <li
+              key={menuItem._id.secondCategory}
+              className="mb-[10px] text-[14px] font-medium leading-[19px] text-[#787D85]"
             >
-              <BuildThirdLevel
-                pages={menuItem.pages}
-                route={menuFromFirstLevel.route}
-              />
-            </ul>
-          </li>
-        ))}
+              <button
+                type="button"
+                onClick={() => openSecondLevel(menuItem._id.secondCategory)}
+              >
+                {menuItem._id.secondCategory}
+              </button>
+              <ul
+                className={cn(styles.secondLevelBlock, {
+                  [styles.secondLevelBlockOpened]: menuItem.isOpened,
+                })}
+              >
+                <BuildThirdLevel
+                  pages={menuItem.pages}
+                  route={menuFromFirstLevel.route}
+                />
+              </ul>
+            </li>
+          );
+        })}
       </ul>
     );
   };
@@ -108,14 +140,16 @@ export const Menu: FC = () => {
       <>
         {pages.map((pageItem) => (
           <li key={pageItem._id}>
-            <a
-              href={`/${route}/${pageItem.alias}`}
-              className={cn(styles.thirdLevel, {
-                [styles.thirdLevel_active]: true,
-              })}
-            >
-              {pageItem.category}
-            </a>
+            <Link href={`/${route}/${pageItem.alias}`}>
+              <a
+                className={cn(styles.thirdLevel, {
+                  [styles.thirdLevel_active]:
+                    `/${route}/${pageItem.alias}` === router.asPath,
+                })}
+              >
+                {pageItem.category}
+              </a>
+            </Link>
           </li>
         ))}
       </>
