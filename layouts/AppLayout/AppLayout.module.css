@@ -13,6 +13,8 @@
 }
 
 .header {
+  @apply block md:hidden;
+
   grid-area: header;
 }
 
@@ -28,6 +30,8 @@
 
 .footer {
   grid-area: footer;
+
+  margin-top: 49px;
 }
 
 @media only screen and (max-width: 768px) {
