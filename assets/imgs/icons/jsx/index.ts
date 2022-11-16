@@ -4,6 +4,7 @@ import CoursesIcon from "./CoursesIcon";
 import BooksIcon from "./BooksIcon";
 import ServicesIcon from "./ServicesIcon";
 import ProductsIcon from "./ProductsIcon";
+import LogoIcon from "./LogoIcon";
 
 export {
   StarIcon,
@@ -12,4 +13,5 @@ export {
   ProductsIcon,
   ServicesIcon,
   BooksIcon,
+  LogoIcon,
 };
