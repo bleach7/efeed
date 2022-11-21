@@ -1,0 +1,63 @@
+.hh {
+  @apply grid grid-cols-[1fr_3fr] gap-[30px];
+}
+
+.title {
+  @apply mb-[12px] pt-[20px] text-center text-[20px] font-light leading-[27px] text-[#3B434E];
+}
+
+.title_count {
+  @apply mt-[20px];
+}
+
+.card {
+  @apply min-h-[140px];
+}
+
+.salary {
+  @apply grid grid-cols-3 overflow-hidden rounded-[5px] bg-white p-[20px] text-center;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.salary > div {
+  @apply rounded-none shadow-none;
+}
+
+.salary > div:not(:last-child) {
+  @apply border-r border-solid border-r-[#EBEBEB];
+}
+
+.stars {
+  @apply mt-[12px] flex justify-center;
+}
+
+.stars > svg:not(:last-child) {
+  @apply mr-[10px];
+}
+
+.filled circle {
+  @apply fill-[#FC836D];
+}
+
+@media only screen and (max-width: 1200px) {
+  .hh {
+    @apply grid-cols-1;
+  }
+
+  .title_count {
+    @apply mt-0;
+  }
+
+  .card {
+    min-height: auto;
+  }
+
+  .title {
+    padding-top: 0px;
+  }
+
+  .card_count {
+    @apply p-[20px];
+  }
+}
