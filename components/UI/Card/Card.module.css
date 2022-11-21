@@ -1,0 +1,11 @@
+.card {
+  @apply card-shadow rounded-[5px] bg-white;
+}
+
+.blue {
+  @apply bg-[#F9F8FF];
+}
+
+.card-shadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
