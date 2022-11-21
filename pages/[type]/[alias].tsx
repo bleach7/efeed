@@ -14,9 +14,22 @@ import {
 import { ParsedUrlQuery } from "querystring";
 import { ProductModel } from "../../interfaces/product.interface";
 import { firstLevelMenu } from "../../helpers/helpers";
+import { TopPageComponent } from "../../pageComponents";
 
-const Course: NextPage<CourseProps> = ({ menu, page, products }) => {
-  return <>{products && products.length}</>;
+const Course: NextPage<TopCourseProps> = ({
+  firstCategory,
+  page,
+  products,
+}) => {
+  return (
+    <>
+      <TopPageComponent
+        firstCategory={firstCategory}
+        page={page}
+        products={products}
+      />
+    </>
+  );
 };
 
 export default withLayout(Course);
@@ -42,7 +55,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<CourseProps> = async ({
+export const getStaticProps: GetStaticProps<TopCourseProps> = async ({
   params,
 }: GetStaticPropsContext<ParsedUrlQuery>) => {
   if (!params) {
@@ -100,7 +113,7 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({
   }
 };
 
-interface CourseProps extends Record<string, unknown> {
+interface TopCourseProps extends Record<string, unknown> {
   menu: MenuItem[];
   firstCategory: TopLevelCategory;
   page: TopPageModel;
