@@ -19,8 +19,6 @@
 }
 
 .sidebar {
-  @apply hidden md:block;
-
   grid-area: sidebar;
 }
 
