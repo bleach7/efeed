@@ -14,7 +14,7 @@ import {
 import { ParsedUrlQuery } from "querystring";
 import { ProductModel } from "../../interfaces/product.interface";
 import { firstLevelMenu } from "../../helpers/helpers";
-import { TopPageComponent } from "../../pageComponents";
+import { TopPageComponent } from "../../components/pages";
 
 const Course: NextPage<TopCourseProps> = ({
   firstCategory,

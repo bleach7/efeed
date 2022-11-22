@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Badge, Card, Heading, HhData } from "../../components/UI";
+import { Badge, Heading, HhData } from "../../UI";
 import { TopPageComponentProps } from "./TopPageComponent.props";
 
 export const TopPageComponent: FC<TopPageComponentProps> = ({
