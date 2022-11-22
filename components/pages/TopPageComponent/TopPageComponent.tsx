@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { TopLevelCategory } from "../../../interfaces/page.interface";
 import { Badge, Heading, HhData } from "../../UI";
 import { TopPageComponentProps } from "./TopPageComponent.props";
 
@@ -30,7 +31,7 @@ export const TopPageComponent: FC<TopPageComponentProps> = ({
           hh.ru
         </Badge>
       </div>
-      <HhData {...page.hh} />
+      {firstCategory === TopLevelCategory.Courses && <HhData {...page.hh} />}
     </section>
   );
 };

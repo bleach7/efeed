@@ -61,3 +61,14 @@
     @apply p-[20px];
   }
 }
+
+@media only screen and (max-width: 885px) {
+  .salary {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .salary > div:not(:last-child) {
+    @apply border-none;
+  }
+}
