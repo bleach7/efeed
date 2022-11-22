@@ -4,6 +4,7 @@ import { Card } from "../Card/Card";
 import styles from "./HhData.module.css";
 import { HhDataProps } from "./HhData.props";
 import cn from "classnames";
+import { priceRu } from "../../../utilities";
 
 export const HhData: FC<HhDataProps> = ({
   count,
@@ -25,7 +26,7 @@ export const HhData: FC<HhDataProps> = ({
         <Card className={styles.card}>
           <div className={styles.title}>Начальный</div>
           <div className="text-[26px] font-bold leading-none text-[#3B434E]">
-            {juniorSalary} ₽
+            {priceRu(juniorSalary)}
           </div>
           <div className={styles.stars}>
             <HhStarIcon className={styles.filled} />
@@ -36,7 +37,7 @@ export const HhData: FC<HhDataProps> = ({
         <Card className={styles.card}>
           <div className={styles.title}>Средний</div>
           <div className="text-[26px] font-bold leading-none text-[#3B434E]">
-            {middleSalary} ₽
+            {priceRu(middleSalary)}
           </div>
           <div className={styles.stars}>
             <HhStarIcon className={styles.filled} />
@@ -47,7 +48,7 @@ export const HhData: FC<HhDataProps> = ({
         <Card className={styles.card}>
           <div className={styles.title}>Профессионал</div>
           <div className="text-[26px] font-bold leading-none text-[#3B434E]">
-            {seniorSalary} ₽
+            {priceRu(seniorSalary)}
           </div>
           <div className={styles.stars}>
             <HhStarIcon className={styles.filled} />
