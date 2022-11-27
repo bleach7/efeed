@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { HhStarIcon } from "../../../assets/imgs/icons/jsx";
-import { Card } from "../Card/Card";
+import { HhStarIcon } from "../../assets/imgs/icons/jsx";
+import { Card } from "../UI/Card/Card";
 import styles from "./HhData.module.css";
 import { HhDataProps } from "./HhData.props";
 import cn from "classnames";
-import { priceRu } from "../../../utilities";
+import { priceRu } from "../../utilities";
 
 export const HhData: FC<HhDataProps> = ({
   count,
