@@ -1,0 +1,23 @@
+.sorting {
+  @apply flex items-center text-[16px] leading-none text-black;
+}
+
+.btn {
+  @apply mr-[40px] flex items-center last:mr-0;
+}
+
+.btn > svg {
+  @apply mr-[8px] hidden;
+}
+
+.active {
+  @apply text-[#7653FC];
+}
+
+.active > svg {
+  @apply inline-block;
+}
+
+.active > span {
+  @apply font-bold;
+}
