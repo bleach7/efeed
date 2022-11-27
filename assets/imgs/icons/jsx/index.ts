@@ -6,6 +6,8 @@ import ServicesIcon from "./ServicesIcon";
 import ProductsIcon from "./ProductsIcon";
 import LogoIcon from "./LogoIcon";
 import HhStarIcon from "./HhStarIcon";
+import AdvantagesIcon from "./AdvantagesIcon";
+import RatingIcon from "./RatingIcon";
 
 export {
   StarIcon,
@@ -16,4 +18,6 @@ export {
   BooksIcon,
   LogoIcon,
   HhStarIcon,
+  AdvantagesIcon,
+  RatingIcon,
 };
