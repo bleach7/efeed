@@ -8,6 +8,7 @@ import LogoIcon from "./LogoIcon";
 import HhStarIcon from "./HhStarIcon";
 import AdvantagesIcon from "./AdvantagesIcon";
 import RatingIcon from "./RatingIcon";
+import SearchIcon from "./SearchIcon";
 
 export {
   StarIcon,
@@ -20,4 +21,5 @@ export {
   HhStarIcon,
   AdvantagesIcon,
   RatingIcon,
+  SearchIcon,
 };
