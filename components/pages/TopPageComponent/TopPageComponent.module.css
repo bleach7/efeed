@@ -3,15 +3,15 @@
 }
 
 .seo > h2 {
-  @apply mb-[20px] text-[22px] font-medium leading-[29px];
+  @apply my-[20px] text-[22px] font-medium leading-[29px];
 }
 
 .seo > h1 {
-  @apply mb-[20px] text-[26px] font-medium leading-[35px];
+  @apply my-[20px] text-[26px] font-medium leading-[35px];
 }
 
 .seo > h3 {
-  @apply mb-[20px] text-[20px] font-semibold leading-[27px];
+  @apply my-[20px] text-[20px] font-semibold leading-[27px];
 }
 
 .seo > ul {

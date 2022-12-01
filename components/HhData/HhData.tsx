@@ -4,7 +4,7 @@ import { Card } from "../UI/Card/Card";
 import styles from "./HhData.module.css";
 import { HhDataProps } from "./HhData.props";
 import cn from "classnames";
-import { priceRu } from "../../utilities";
+import { priceRu } from "../../helpers/priceRu";
 
 export const HhData: FC<HhDataProps> = ({
   count,
