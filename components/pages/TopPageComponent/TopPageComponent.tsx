@@ -8,6 +8,7 @@ import { HhData } from "../../HhData/HhData";
 import { Sorting } from "../../Sorting/Sorting";
 import { SortEnum } from "../../Sorting/Sorting.props";
 import { sortReducer } from "./sort.reducer";
+import { Product } from "../../Product/Product";
 
 export const TopPageComponent: FC<TopPageComponentProps> = ({
   firstCategory,
@@ -40,7 +41,7 @@ export const TopPageComponent: FC<TopPageComponentProps> = ({
       <div>
         {Boolean(sortedProducts) &&
           sortedProducts.map((product) => (
-            <article key={product._id}>{product.title}</article>
+            <Product key={product._id} product={product} />
           ))}
       </div>
       <div className="mb-[25px] mt-[51px] grid grid-cols-[auto_1fr] items-center justify-items-start gap-[20px]">
