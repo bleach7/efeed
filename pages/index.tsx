@@ -1,9 +1,19 @@
 import type { GetStaticProps, NextPage } from "next";
 import { useState } from "react";
-import { Badge, Button, Heading, Rating, Text } from "../components/UI";
+import {
+  Badge,
+  Button,
+  Divider,
+  Heading,
+  Input,
+  Rating,
+  Text,
+  Textarea,
+} from "../components/UI";
 import { withLayout } from "../layouts/AppLayout/AppLayout";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
+import { Search } from "../layouts/components/Search/Search";
 
 const Home: NextPage<HomeProps> = ({ menu }) => {
   const [rating, setRating] = useState<number>(5);
@@ -69,6 +79,15 @@ const Home: NextPage<HomeProps> = ({ menu }) => {
       </div>
       <div className="mb-[25px]">
         <Rating rating={rating} setRating={setRating} isEditable />
+      </div>
+      <div className="mb-[25px]">
+        <Input placeholder="Name" />
+      </div>
+      <div className="mb-[25px]">
+        <Textarea placeholder="Description" />
+      </div>
+      <div className="mb-[25px]">
+        <Divider />
       </div>
     </>
   );
