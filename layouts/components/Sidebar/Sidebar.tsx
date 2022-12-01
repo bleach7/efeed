@@ -4,6 +4,7 @@ import cn from "classnames";
 import { Menu } from "../Menu/Menu";
 import { LogoIcon } from "../../../assets/imgs/icons/jsx";
 import Link from "next/link";
+import { Search } from "../Search/Search";
 
 export const Sidebar = ({ className, ...props }: SidebarProps) => {
   return (
@@ -13,7 +14,7 @@ export const Sidebar = ({ className, ...props }: SidebarProps) => {
           <LogoIcon className="mb-[19px]" />
         </a>
       </Link>
-      <div>Поиск</div>
+      <Search />
       <Menu />
     </aside>
   );
